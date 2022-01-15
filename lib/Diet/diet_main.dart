@@ -24,19 +24,14 @@ class _diet_mainState extends State<diet_main> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueAccent.shade400,
       appBar: AppBar(
         title: const Text("Diet Summary"),
       ),
       body: Stack(
         children: [
           Positioned(
-              top: _screenH / 20,
-              left: _screenWidth / 2,
-              child: Text("Monthly Summary")),
-          Positioned(
-              top: _screenH / 4,
-              left: _screenWidth / 5,
+              top: 0,
+              left: 0,
               child: Container(
                 child: Row(
                   children: [
@@ -50,17 +45,14 @@ class _diet_mainState extends State<diet_main> {
                     )
                   ],
                 ),
-                width: _screenWidth / 1.8,
-                height: _screenH / 3.5,
+                width: _screenWidth - 5,
+                height: _screenH,
                 decoration: const BoxDecoration(
                     image: DecorationImage(
+                        fit: BoxFit.fitWidth,
                         image: NetworkImage(
-                            "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p1.png?raw=true"))),
+                            "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p5.png?raw=true"))),
               )),
-          Positioned(
-              top: _screenH / 4,
-              left: _screenWidth / 5,
-              child: Text("This Month Summary")),
           Positioned(
               left: _screenWidth / 1.3,
               top: _screenH / 1.25,
