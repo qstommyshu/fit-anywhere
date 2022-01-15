@@ -88,11 +88,11 @@ class HomePage extends StatelessWidget {
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/Excrecises.svg',
-                          title: 'Kegel Excersises',
+                          title: 'Cardio',
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/Meditation.svg',
-                          title: 'What is this?',
+                          title: 'Weight Training',
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/yoga.svg',

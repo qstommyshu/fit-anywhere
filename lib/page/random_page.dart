@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_excersises_app/theme.dart';
 import 'package:flutter_excersises_app/widgets/bottom_nav.dart';
+import 'package:flutter_excersises_app/widgets/date_card.dart';
 import 'package:flutter_excersises_app/widgets/search_bar.dart';
 import 'package:flutter_excersises_app/widgets/session_card.dart';
 import 'package:flutter_svg/svg.dart';
@@ -18,12 +19,12 @@ class RandomPage extends StatelessWidget {
               height: MediaQuery.of(context).size.height * .50,
               decoration: const BoxDecoration(
                 color: blueLightColor,
-                image: DecorationImage(
-                  image: AssetImage(
-                    'assets/images/meditation_bg.png',
-                  ),
-                  fit: BoxFit.fitWidth,
-                ),
+                // image: DecorationImage(
+                //   image: AssetImage(
+                //     'assets/images/meditation_bg.png',
+                //   ),
+                //   fit: BoxFit.fitWidth,
+                // ),
               ),
             ),
             SafeArea(
@@ -36,7 +37,7 @@ class RandomPage extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.05,
                     ),
                     Text(
-                      'Meditation',
+                      'This is RandomPage',
                       style: Theme.of(context)
                           .textTheme
                           .headline4!
@@ -57,13 +58,13 @@ class RandomPage extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * .6,
                       child: const Text(
-                        'Life happier and healthier by learning the fundamentals of meditation and mindfullnes',
+                        'You can improve your productivity by doing some exercises in your work break',
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * .5,
-                      child: const SearchBar(),
-                    ),
+                    // SizedBox(
+                    //   width: MediaQuery.of(context).size.width * .5,
+                    //   child: const SearchBar(),
+                    // ),
                     Wrap(
                       spacing: 20,
                       runSpacing: 20,
@@ -71,6 +72,10 @@ class RandomPage extends StatelessWidget {
                         SessionCard(
                           sessionNum: 01,
                           isDone: true,
+                        ),
+                        DateCard(
+                          sessionNum: 02,
+                          isDone: false,
                         ),
                       ],
                     ),

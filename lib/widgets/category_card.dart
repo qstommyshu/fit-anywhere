@@ -35,7 +35,7 @@ class CategoryCard extends StatelessWidget {
         child: InkWell(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const RandomPage()));
+                MaterialPageRoute(builder: (context) => const DetailPage()));
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),

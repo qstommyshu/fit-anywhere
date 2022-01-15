@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_excersises_app/page/random_page.dart';
 import 'package:flutter_excersises_app/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -19,11 +20,12 @@ class BottomNav extends StatelessWidget {
           BottomNavbarItem(
             svgSrc: 'assets/icons/calendar.svg',
             label: 'Today',
+            // isActive: true,
           ),
           BottomNavbarItem(
             svgSrc: 'assets/icons/gym.svg',
             label: 'All Excersises',
-            isActive: true,
+            // isActive: true,
           ),
           BottomNavbarItem(
             svgSrc: 'assets/icons/Settings.svg',
@@ -49,17 +51,23 @@ class BottomNavbarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SvgPicture.asset(svgSrc!),
-        const Spacer(),
-        Text(
-          label!,
-          style: TextStyle(
-            color: isActive! ? activeIconColor : textColor,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const RandomPage()));
+      },
+      child: Column(
+        children: [
+          SvgPicture.asset(svgSrc!),
+          const Spacer(),
+          Text(
+            label!,
+            style: TextStyle(
+              color: isActive! ? activeIconColor : textColor,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
