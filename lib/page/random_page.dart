@@ -73,10 +73,10 @@ class RandomPage extends StatelessWidget {
                           sessionNum: 01,
                           isDone: true,
                         ),
-                        DateCard(
-                          sessionNum: 02,
-                          isDone: false,
-                        ),
+                        // DateCard(
+                        //   sessionNum: 02,
+                        //   isDone: false,
+                        // ),
                       ],
                     ),
                     const SizedBox(height: 10),
@@ -86,44 +86,11 @@ class RandomPage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Container(
-                      margin: const EdgeInsets.symmetric(vertical: 20),
-                      height: 90,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(13),
-                      ),
-                      child: Row(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/icons/Meditation_women_small.svg',
-                          ),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Basic 2',
-                                  style: Theme.of(context).textTheme.bodyText1,
-                                ),
-                                Text(
-                                  'Start your deepen practices',
-                                  style: Theme.of(context).textTheme.subtitle1,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 25),
-                            child: SvgPicture.asset('assets/icons/Lock.svg'),
-                          ),
-                        ],
-                      ),
-                    )
+                    for(var i=0 ;i<3; i++)
+                      DateCard(
+                        sessionNum: 03,
+                          isDone: true,
+                      )
                   ],
                 ),
               ),

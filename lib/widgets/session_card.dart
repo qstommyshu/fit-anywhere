@@ -48,7 +48,7 @@ class SessionCard extends StatelessWidget {
                         ),
                       ),
                       child: Icon(
-                        Icons.play_arrow,
+                        Icons.play_circle_rounded,
                         color: isDone! ? Colors.white : blueColor,
                       ),
                     ),
