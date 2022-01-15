@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'qr_page.dart';
 import 'manu_input.dart';
+import 'diet_det.dart';
 
 class diet_main extends StatefulWidget {
   diet_main({Key? key}) : super(key: key);
@@ -37,6 +38,18 @@ class _diet_mainState extends State<diet_main> {
               top: _screenH / 4,
               left: _screenWidth / 5,
               child: Container(
+                child: Row(
+                  children: [
+                    GestureDetector(
+                      onTap: (() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => manu_input()));
+                      }),
+                    )
+                  ],
+                ),
                 width: _screenWidth / 1.8,
                 height: _screenH / 3.5,
                 decoration: const BoxDecoration(
