@@ -50,24 +50,23 @@ class BottomNavbarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: GestureDetector(
-          onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => diet_main()));
-          },
-          child: Column(
-            children: [
-              SvgPicture.asset(svgSrc!),
-              const Spacer(),
-              Text(
-                label!,
-                style: TextStyle(
-                  color: isActive! ? activeIconColor : textColor,
-                ),
-              ),
-            ],
-          )),
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => diet_main()));
+      },
+      child: Column(
+        children: [
+          SvgPicture.asset(svgSrc!),
+          const Spacer(),
+          Text(
+            label!,
+            style: TextStyle(
+              color: isActive! ? activeIconColor : textColor,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
