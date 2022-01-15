@@ -26,13 +26,13 @@ class _diet_detailState extends State<diet_detail> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            width: 400,
-            height: 600,
+            margin: EdgeInsets.symmetric(horizontal: 2),
+            height: 450,
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                        "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p3.png?raw=true"))),
+                        "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p4.png?raw=true"))),
           ),
         ],
       ),
