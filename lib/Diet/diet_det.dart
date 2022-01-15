@@ -8,36 +8,32 @@ class diet_detail extends StatefulWidget {
 }
 
 class _diet_detailState extends State<diet_detail> {
+  double _screenWidth = 0;
+  double _screenH = 0;
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    _screenH = MediaQuery.of(context).size.height;
+    _screenWidth = MediaQuery.of(context).size.width;
+  }
+
   @override
   Widget build(BuildContext context) {
-    double _screenWidth = 0;
-    double _screenH = 0;
-    @override
-    void didChangeDependencies() {
-      super.didChangeDependencies();
-
-      _screenH = MediaQuery.of(context).size.height;
-      _screenWidth = MediaQuery.of(context).size.width;
-    }
-
     return Scaffold(
       appBar: AppBar(title: Text("Detail Consumption for Protein")),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            "Jan 2022 - Feb 2022",
-            style: TextStyle(
-              decoration: TextDecoration.underline,
-            ),
-          ),
           Container(
-            width: _screenWidth / 2,
-            height: _screenH / 3,
-            decoration: BoxDecoration(
+            width: 400,
+            height: 600,
+            decoration: const BoxDecoration(
                 image: DecorationImage(
+                    fit: BoxFit.cover,
                     image: NetworkImage(
-                        "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p2.png?raw=true"))),
-          )
+                        "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p3.png?raw=true"))),
+          ),
         ],
       ),
     );
