@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_excersises_app/page/random_page.dart';
 import 'package:flutter_excersises_app/theme.dart';
 
 class SessionCard extends StatelessWidget {
@@ -32,7 +33,10 @@ class SessionCard extends StatelessWidget {
           child: Material(
             color: Colors.transparent,
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => RandomPage()));
+              },
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(

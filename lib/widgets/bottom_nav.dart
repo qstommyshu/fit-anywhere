@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_excersises_app/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_excersises_app/Diet/diet_main.dart';
 
 class BottomNav extends StatelessWidget {
   const BottomNav({
@@ -49,17 +50,24 @@ class BottomNavbarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SvgPicture.asset(svgSrc!),
-        const Spacer(),
-        Text(
-          label!,
-          style: TextStyle(
-            color: isActive! ? activeIconColor : textColor,
-          ),
-        ),
-      ],
+    return Container(
+      child: GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => diet_main()));
+          },
+          child: Column(
+            children: [
+              SvgPicture.asset(svgSrc!),
+              const Spacer(),
+              Text(
+                label!,
+                style: TextStyle(
+                  color: isActive! ? activeIconColor : textColor,
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
