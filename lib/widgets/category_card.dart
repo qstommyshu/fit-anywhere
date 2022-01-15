@@ -8,10 +8,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CategoryCard extends StatelessWidget {
   final String? svgSrc;
   final String? title;
+  final Widget? pageTo;
 
   const CategoryCard({
     Key? key,
     this.svgSrc,
+    this.pageTo,
     this.title,
   }) : super(key: key);
 
@@ -34,8 +36,8 @@ class CategoryCard extends StatelessWidget {
         color: Colors.transparent,
         child: InkWell(
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const RandomPage()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => pageTo!));
           },
           child: Padding(
             padding: const EdgeInsets.all(20.0),

@@ -6,6 +6,8 @@ import 'widgets/bottom_nav.dart';
 import 'widgets/category_card.dart';
 import 'widgets/search_bar.dart';
 
+import 'Diet/diet_main.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -81,22 +83,26 @@ class HomePage extends StatelessWidget {
                       childAspectRatio: .85,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      children: const [
+                      children: [
                         CategoryCard(
                           svgSrc: 'assets/icons/Hamburger.svg',
                           title: 'Diet Recomendation',
+                          pageTo: diet_main(),
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/Excrecises.svg',
                           title: 'Kegel Excersises',
+                          pageTo: diet_main(),
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/Meditation.svg',
                           title: 'What is this?',
+                          pageTo: diet_main(),
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/yoga.svg',
                           title: 'Yoga',
+                          pageTo: diet_main(),
                         ),
                       ],
                     ),
