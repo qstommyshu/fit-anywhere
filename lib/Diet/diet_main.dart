@@ -45,7 +45,7 @@ class _diet_mainState extends State<diet_main> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => manu_input()));
+                                builder: (context) => diet_detail()));
                       }),
                     )
                   ],
