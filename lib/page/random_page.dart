@@ -37,7 +37,7 @@ class RandomPage extends StatelessWidget {
                       height: MediaQuery.of(context).size.height * 0.05,
                     ),
                     Text(
-                      'This is RandomPage',
+                      'You can see today\'s workout here',
                       style: Theme.of(context)
                           .textTheme
                           .headline4!
@@ -47,7 +47,7 @@ class RandomPage extends StatelessWidget {
                       height: 10,
                     ),
                     const Text(
-                      'Something',
+                      '',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
