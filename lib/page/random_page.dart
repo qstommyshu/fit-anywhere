@@ -47,7 +47,7 @@ class RandomPage extends StatelessWidget {
                       height: 10,
                     ),
                     const Text(
-                      '3 - 10 Min Course',
+                      'Something',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -86,10 +86,12 @@ class RandomPage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    for(var i=0 ;i<3; i++)
+                    for(var i=0 ;i<4; i++)
                       DateCard(
-                        sessionNum: 03,
+                        id: i,
+                        setNum: 03,
                           isDone: true,
+                        imageAddress: 'assets/icons/Meditation_women_small.svg'
                       )
                   ],
                 ),
