@@ -51,7 +51,7 @@ class _diet_mainState extends State<diet_main> {
                     image: DecorationImage(
                         fit: BoxFit.fitWidth,
                         image: NetworkImage(
-                            "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p5.png?raw=true"))),
+                            "https://github.com/RayLyu-Mac/fit-anywhere/blob/ray/assets/images/p6.png?raw=true"))),
               )),
           Positioned(
               left: _screenWidth / 1.3,

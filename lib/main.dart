@@ -7,6 +7,7 @@ import 'widgets/category_card.dart';
 import 'widgets/search_bar.dart';
 
 import 'Diet/diet_main.dart';
+import 'main_dash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,7 +29,9 @@ class MyApp extends StatelessWidget {
               displayColor: textColor,
             ),
       ),
-      home: const HomePage(),
+      home: PageView(
+        children: [main_dash(), HomePage()],
+      ),
     );
   }
 }
