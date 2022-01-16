@@ -99,7 +99,7 @@ class HomePage extends StatelessWidget {
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/Meditation.svg',
-                          title: 'What is this?',
+                          title: 'Weight Training',
                           pageTo: diet_main(),
                         ),
                         CategoryCard(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_excersises_app/page/random_page.dart';
 import 'package:flutter_excersises_app/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_excersises_app/Diet/diet_main.dart';
@@ -20,11 +21,12 @@ class BottomNav extends StatelessWidget {
           BottomNavbarItem(
             svgSrc: 'assets/icons/calendar.svg',
             label: 'Today',
+            // isActive: true,
           ),
           BottomNavbarItem(
             svgSrc: 'assets/icons/gym.svg',
             label: 'All Excersises',
-            isActive: true,
+            // isActive: true,
           ),
           BottomNavbarItem(
             svgSrc: 'assets/icons/Settings.svg',
@@ -53,7 +55,7 @@ class BottomNavbarItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => diet_main()));
+            context, MaterialPageRoute(builder: (context) => const RandomPage()));
       },
       child: Column(
         children: [
