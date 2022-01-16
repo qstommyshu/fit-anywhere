@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_excersises_app/page/dashboard.dart';
 import 'package:flutter_excersises_app/theme.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -102,8 +101,8 @@ class HomePage extends StatelessWidget {
                         ),
                         CategoryCard(
                           svgSrc: 'assets/icons/yoga.svg',
-                          title: 'steps',
-                          pageTo: Dashboard(),
+                          title: 'Yoga',
+                          pageTo: diet_main(),
                         ),
                       ],
                     ),
